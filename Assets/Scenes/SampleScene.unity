@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 551363926}
   - component: {fileID: 551363925}
   m_Layer: 5
-  m_Name: Score
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -811,6 +811,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23df3c812d42d1c469382c8402863650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1823853580}
+  scoreText: {fileID: 551363925}
+  playButton: {fileID: 2065895136}
+  gameOverButton: {fileID: 1829722714}
 --- !u!4 &1571049432
 Transform:
   m_ObjectHideFlags: 0
@@ -1126,7 +1130,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2065895139}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1571049431}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2065895139
 MonoBehaviour:
   m_ObjectHideFlags: 0
